@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import clsx from 'clsx';
 import { AppBar, CssBaseline, Divider, Drawer, IconButton, List, Toolbar } from '@material-ui/core';
 
@@ -10,10 +10,13 @@ import { useStyles, nombreAplicacion } from '../../styles/theme';
 import {FootBar } from '../ui/FootBar'
 import {ToolBarScreen } from '../ui/ToolBarScreen'
 
+import { DataGrid } from '@material-ui/data-grid';
 
+const row = [
+    { id: 1, nombre: 'Cargando...'}
+];
 
-
-export const AlliyanaScreen = () => {
+export const ResidentesScreen = () => {
 
     //Theme
     const classes = useStyles();
@@ -26,6 +29,20 @@ export const AlliyanaScreen = () => {
     };
     //const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
     //Theme end 
+
+
+    const columns = [
+        { field: 'id', headerName: 'ID', width: 70 },
+        { field: 'nombre', headerName: 'Nombre', width: 180 },
+        { field: 'email', headerName: 'E-mail', width: 210 },
+        { field: 'celular', headerName: 'Celular', width: 73 },
+        { field: 'lote', headerName: 'Lote', width: 73 }
+
+    ];
+
+    //inicio de las row
+    
+    const [rows, setRows] = useState(row);
 
 
 
@@ -67,9 +84,15 @@ export const AlliyanaScreen = () => {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
-        Contenido
-
-
+            <div className={classes.container} >
+            <div style={{ height: 400, width: '100%' }}>
+                <DataGrid 
+                rows={rows} 
+                columns={columns} 
+                pageSize={5}
+                />
+                </div>
+            </div>
         <FootBar classes={classes}/>  
       </main>
     </div>

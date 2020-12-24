@@ -1,43 +1,36 @@
 import React from 'react'
 import { ListItem, ListItemIcon, ListItemText, ListSubheader } from '@material-ui/core';
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
-import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
+import DateRangeIcon from '@material-ui/icons/DateRange';
+import BuildIcon from '@material-ui/icons/Build';
 
 export const mainListItems = (
     <div>
       <ListItem button>
         <ListItemIcon>
-          <DashboardIcon />
+          <DateRangeIcon />
         </ListItemIcon>
-        <ListItemText primary="Dashboard" />
+        <ListItemText primary="Calendario" />
       </ListItem>
       <ListItem button>
         <ListItemIcon>
-          <ShoppingCartIcon />
+          <BuildIcon />
         </ListItemIcon>
-        <ListItemText primary="Orders" />
+        <ListItemText primary="Herramientas" />
       </ListItem>
       <ListItem button>
         <ListItemIcon>
           <PeopleIcon />
         </ListItemIcon>
-        <ListItemText primary="Customers" />
+        <ListItemText primary="Residentes" />
       </ListItem>
       <ListItem button>
         <ListItemIcon>
           <BarChartIcon />
         </ListItemIcon>
-        <ListItemText primary="Reports" />
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <LayersIcon />
-        </ListItemIcon>
-        <ListItemText primary="Integrations" />
+        <ListItemText primary="Reportes" />
       </ListItem>
     </div>
   );
