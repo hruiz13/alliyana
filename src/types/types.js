@@ -11,5 +11,8 @@ export const types = {
     authStartTokenRenew: '[Auth] Start token renew',
     authLogout: '[Auth] Start token renew',
 
+    loadResidents: '[Residents] Loading residents',
+    residentsLoaded: '[Residents] Residents loaded',
+
 
 }

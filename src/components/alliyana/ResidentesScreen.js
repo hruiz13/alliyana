@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import { AppBar, CssBaseline, Divider, Drawer, IconButton, List, Toolbar } from '@material-ui/core';
 
@@ -11,6 +11,8 @@ import {FootBar } from '../ui/FootBar'
 import {ToolBarScreen } from '../ui/ToolBarScreen'
 
 import { DataGrid } from '@material-ui/data-grid';
+import { useDispatch, useSelector } from 'react-redux';
+import { loadResidents } from '../../actions/residents';
 
 const row = [
     { id: 1, nombre: 'Cargando...'}
@@ -30,6 +32,17 @@ export const ResidentesScreen = () => {
     //const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
     //Theme end 
 
+    const dispatch = useDispatch();
+
+    //obteniendo datos de db y guardamos en store
+    useEffect(() => {
+        dispatch(loadResidents());
+    }, [dispatch])
+
+    //sacamos datos del store
+    
+    const {residents} = useSelector(state => state.residents)
+
 
     const columns = [
         { field: 'id', headerName: 'ID', width: 70 },
@@ -43,6 +56,15 @@ export const ResidentesScreen = () => {
     //inicio de las row
     
     const [rows, setRows] = useState(row);
+
+    //cuando llegan los datos de la db
+    useEffect(() => {
+        if(!!residents){
+            setRows(residents);
+        }else{
+            setRows(row)
+        }
+    }, [residents])
 
 
 
