@@ -5,6 +5,7 @@ import BarChartIcon from '@material-ui/icons/BarChart';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import BuildIcon from '@material-ui/icons/Build';
+import {Link} from 'react-router-dom'
 
 export const mainListItems = (
     <div>
@@ -20,12 +21,14 @@ export const mainListItems = (
         </ListItemIcon>
         <ListItemText primary="Herramientas" />
       </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <PeopleIcon />
-        </ListItemIcon>
-        <ListItemText primary="Residentes" />
-      </ListItem>
+      <Link to="/residentes" className="links">
+        <ListItem button>
+            <ListItemIcon>
+              <PeopleIcon />
+            </ListItemIcon>
+            <ListItemText primary="Residentes" />
+        </ListItem>
+      </Link>
       <ListItem button>
         <ListItemIcon>
           <BarChartIcon />

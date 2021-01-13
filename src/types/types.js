@@ -13,6 +13,10 @@ export const types = {
 
     loadResidents: '[Residents] Loading residents',
     residentsLoaded: '[Residents] Residents loaded',
+    saveResident: '[Residents] Save resident',
+    residentSaved: '[Residents] Resident saved',
+    deleteResident: '[Residents] Delete Resident',
+    editResident: '[Residents] Edit Resident',
 
 
 }

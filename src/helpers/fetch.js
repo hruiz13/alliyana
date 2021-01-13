@@ -5,6 +5,8 @@ export const fetchSinToken = ( endpoint, data, method = 'GET' ) =>{
     const url = `${baseUrl}/${endpoint}`; 
     if(method === 'GET'){
         return fetch(url);
+    }else if(method === 'DELETE'){
+        return fetch(url,{method});
     }else{
         return fetch(url,{
             method,
@@ -16,6 +18,7 @@ export const fetchSinToken = ( endpoint, data, method = 'GET' ) =>{
     }
 
 }
+
 
 export const fetchConToken = ( endpoint, data, method = 'GET' ) =>{
 

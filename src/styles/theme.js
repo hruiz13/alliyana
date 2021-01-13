@@ -1,20 +1,29 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import { deepOrange } from '@material-ui/core/colors';
 import { makeStyles } from '@material-ui/core';
 
 export const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#5bd4a5',
+      main: '#41B3A3',
+      // main: '#5bd4a5',
     },
     secondary: {
-      main: '#e9e2f2',
+      main: '#85CDCB',
+      // main: '#e9e2f2',
     },
-  },
+    error: {
+      main: '#E27D60'
+    },
+    warning: {
+      main:'#E8A87C'
+    },
+    info: {
+      main:'#C38D9E'
+    },
   status:{
-      danger: deepOrange
+      danger: '#E27D60'
   }
-});
+}});
 
 export const nombreAplicacion = "El terruño App";
 
@@ -22,6 +31,11 @@ const drawerWidth = 240;
 export const useStyles = makeStyles((theme) => ({
     root: {
       display: 'flex',
+      '& .MuiTextField-root': {
+        margin: theme.spacing(1),
+        width: '25ch',
+      },
+      
     },
     toolbar: {
       paddingRight: 24, // keep right padding when drawer closed
