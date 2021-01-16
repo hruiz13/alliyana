@@ -113,12 +113,16 @@ export const useStyles = makeStyles((theme) => ({
       height: 240,
     },
     footer: {
-      padding: theme.spacing(3, 2),
+      padding: theme.spacing(1, 2),
       //marginTop: 'auto',
       position: 'fixed',
       bottom: 0,
-      width: '90vw',
+      right: 0,
+      width: '100%',
       backgroundColor:
         theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[800],
+    },
+    textCenter: {
+      textAlign: 'center',
     },
   }));

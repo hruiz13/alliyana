@@ -9,12 +9,14 @@ import {Link} from 'react-router-dom'
 
 export const mainListItems = (
     <div>
-      <ListItem button>
-        <ListItemIcon>
-          <DateRangeIcon />
-        </ListItemIcon>
-        <ListItemText primary="Calendario" />
-      </ListItem>
+      <Link to="/calendario" className="links">
+        <ListItem button>
+          <ListItemIcon>
+            <DateRangeIcon />
+          </ListItemIcon>
+          <ListItemText primary="Calendario" />
+        </ListItem>
+      </Link>
       <ListItem button>
         <ListItemIcon>
           <BuildIcon />

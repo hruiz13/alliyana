@@ -5,6 +5,7 @@ import {
     Route
   } from "react-router-dom";
 import { AlliyanaScreen } from '../components/alliyana/AlliyanaScreen';
+import { CalendarioScreen } from '../components/alliyana/calendario/CalendarioScreen';
 import { ResidentesScreen } from '../components/alliyana/ResidentesScreen';
 
 export const AppRouter = () => {
@@ -18,6 +19,10 @@ export const AppRouter = () => {
                 <Route 
                     exact path="/residentes"
                     component={ ResidentesScreen }
+                />
+                <Route 
+                    exact path="/calendario"
+                    component={ CalendarioScreen }
                 />
             </Switch>
         </Router>

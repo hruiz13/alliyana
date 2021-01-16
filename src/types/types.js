@@ -18,5 +18,12 @@ export const types = {
     deleteResident: '[Residents] Delete Resident',
     editResident: '[Residents] Edit Resident',
 
+    loadCalendar: '[Calendar] Loading calendar',
+    calendarLoaded: '[Calendar] Calendar loaded',
+    saveCalendar: '[Calendar] Save calendar',
+    calendarUpdated: '[Calendar] Update calendar',
+    calendarDeleted: '[Calendar] Deleted calendar item',
+
+
 
 }
